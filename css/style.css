@@ -1,0 +1,347 @@
+/* Globales */
+html{
+   font-size: 62.5%; /* Reset para rems - 62.5% = 10px de 16px*/
+}
+
+body{
+  font-family: lato, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+h1{ font-size: 3.8rem;}
+h2{ font-size: 3.4rem;}
+h3{ font-size: 3.0rem;}
+h4{ font-size: 2.8rem;}
+
+.contenedor{
+     max-width: 1200px;
+     margin: 0 auto;
+}
+
+.seccion{
+   margin-bottom: 3rem;
+}
+
+img{
+   max-width: 100%;
+}
+
+
+/* Utilidades */
+
+.titulo-centrado {
+   text-align: center;
+   font-weight: 300;
+}
+
+.centrar {
+   text-align: center;
+}
+
+
+/* botones */
+
+.d-block{
+     display: block!important;
+}
+
+.boton{
+     text-decoration: none;
+     font-weight: 700;
+     color: #ffffff;
+     padding: 1rem 3rem;
+     font-size: 1.8rem;
+     display: inline-block;
+     margin-top: 1.5rem;
+}
+
+.boton-naranja{
+background-color: #E08709;
+}
+
+.boton-verde{
+background-color: #71B100;
+}
+
+/* :::::::::::::Header:::::::::::::::: */
+.site-header.inicio{
+     background-image: url(../img/header.jpg);
+     background-position: center center;
+     background-size: cover;
+     height: 100vh;
+     min-height: 600px;
+}
+
+.barra{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-top: 3rem;
+}
+
+.navegacion a{
+     color: #ffffff;
+     text-decoration: none;
+     font-size: 18px;
+     margin-right: 3rem;;
+}
+
+.navegacion a:hover{
+     color: #71B100;
+}
+
+.navegacion a:last-of-type{
+     margin: 0;
+}
+
+.contenido-header{
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.contenido-header h1{
+     font-size: 5rem;
+     color: #ffffff;
+     font-weight: 300;
+     width: 60rem;
+     padding-bottom: 5rem;
+}
+
+
+/* :::::::::::::MAS SOBRE NOSOTROS::::::::: */
+
+.contenedor-iconos{
+     display: flex;
+     justify-content: space-between;
+}
+.icono{
+     text-align: center;
+     font-size: 1.8rem;
+     width: calc(33.3% - 1rem);
+}
+
+.icono p{
+     line-height: 1.4;
+}
+
+
+/* :::::::::::::ANUNCIOS::::::::: */
+
+.contenedor-anuncios{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anuncio{
+   flex: 0 0 calc(33.3% - 1rem);
+   /* flex-grow: 0; ---agrandar
+      flex-shrink: 0; ---encoger
+      flex-basis: calc(33.3% - 1rem); ---ancho */
+   font-size: 1.8rem;
+   background-color: #F5F5F5;
+   margin-bottom: 2rem;
+   border: 1px solid #B5B5B5;
+}
+
+.contenido-anuncio{
+  padding: 3rem;
+}
+
+.contenido-anuncio h3 {
+   margin: 0;
+}
+.contenido-anuncio p{
+   /* margin: 0; */
+}
+
+.precio{
+   text-decoration: none;
+   font-size: 2rem;
+   color: #71B100;
+   text-align: left;
+}
+
+.iconos{
+   padding: 0;
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 8%;
+   flex: 1;
+   max-width: 300px;
+}
+
+.iconos li{
+   display: flex;
+   margin-bottom: 0;
+}
+
+.iconos li img{
+   width: 50%;
+}
+
+.iconos li p{
+   margin-left: 15px;
+}
+
+.ver-todas{
+   display: flex;
+   justify-content: flex-end;
+}
+
+/* -------------Contactenos----------- */
+
+.fondo-contactenos{
+   background-image: url(../img/encuentra.jpg);
+   background-position: center center;
+   background-size: cover;
+   height: 400px;
+
+   display: flex;
+   align-items: center;
+}
+
+.contenido-contactenos{
+   flex: 1;
+   color: #ffffff;
+}
+
+.contenido-contactenos p {
+   font-size: 1.5rem;
+}
+
+/* -------------Blog----------- */
+.seccion-inferior{
+   display: flex;
+   justify-content: space-between;
+}
+
+.blog{
+   flex-basis: 60%;
+}
+
+.testimoniales{
+   flex-basis: calc(40% - 4rem);
+}
+
+.entrada-blog{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 2rem;
+}
+
+.img-blog{
+   flex-basis: 40%;
+}
+
+.texto-blog{
+   flex-basis: calc(60% - 3rem);
+}
+
+.texto-blog a{
+   text-decoration: none;
+   color: black;
+}
+
+.texto-blog h4{
+   margin: 0;
+}
+
+.texto-blog h4::after{
+   content: '';
+   display: block;
+   width: 150px;
+   height: 3px;
+   background-color: #71B100;
+}
+
+.texto-blog span{
+   color: orange;
+}
+
+/* -------------Testimoniales----------- */
+.testimonial{
+   background-color: #71B100;
+   border-radius: 20px;
+   color: white;
+   font-size: 2rem;
+   padding: 2rem;
+}
+
+.testimonial p{
+   text-align: right;
+}
+
+.testimonial blockquote::before{
+   content: '';
+   background-image: url(../img/comilla.svg);
+   width: 4rem;
+   height: 4rem;
+   position: absolute;
+   left: -20px;
+}
+
+.testimonial blockquote{
+   position: relative;
+   padding-left: 5rem;
+   font-weight: 300;
+}
+
+
+/* ::::::::::::Footer:::::::::::: */
+
+.site-footer{
+   background-color: #333333;
+   margin: 0;
+
+}
+
+.copyright{
+   margin:0;
+   color: white;
+}
+
+.contenedor-footer{
+   padding: 3rem 0;
+   display: flex;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+/* INTERNAS*/
+/* Nosotros*/
+
+.site-header{
+   background-color: #333333;
+   padding: 0 0 2rem 0;
+}
+
+.contenido-nosotros{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-column-gap: 30px;
+}
+
+.texto-nosotros blockquote{
+   font-weight: 900;
+   font-size: 2rem;
+   padding: 2rem 0 ;
+   margin: 0;
+}
+
+/* Anuncio*/
+
+.contenido-centrado{
+   max-width: 800px;
+}
+
+.anuncio-precio-iconos{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
