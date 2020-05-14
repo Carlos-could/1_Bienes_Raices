@@ -7,6 +7,10 @@ body{
   font-family: lato, sans-serif;
   font-size: 1.6rem;
   line-height: 2;
+  box-sizing: border-box;
+}
+*{
+   box-sizing: border-box;
 }
 
 h1{ font-size: 3.8rem;}
@@ -54,6 +58,11 @@ img{
      font-size: 1.8rem;
      display: inline-block;
      margin-top: 1.5rem;
+     border: 0;
+}
+
+.boton:hover{
+     cursor: pointer;
 }
 
 .boton-naranja{
@@ -349,6 +358,50 @@ background-color: #71B100;
 
 /* Contacto */
 
+legend{
+   font-size: 3rem;
+}
+
+
 label{
 	display: block;
+   font-weight: 700;
+   font-size: 2rem;
 }
+
+input:not([type="submit"]), textarea,
+select
+{
+   background-color: #e1e1e1;
+   border-radius: 0.5rem;
+   border:none;
+   margin-bottom: 1rem;
+   width: 100%;
+   padding: 1rem;
+
+}
+
+textarea{
+   height: 200px;
+   max-width: 100%;
+   display: inline-block;
+   max-width: 765px;
+}
+
+.forma-contacto {
+   max-width: 30rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+input[type="radio"]{
+   margin: 0;
+   width: 100%;
+}
+
+form p{
+   margin: 2rem 0 0 0;
+}
+
+/* botones
