@@ -2,15 +2,17 @@
 html{
    font-size: 62.5%; /* Reset para rems - 62.5% = 10px de 16px*/
 }
+*, *:before, *:afeter{
+   box-sizing: border-box;
+}
 
 body{
   font-family: lato, sans-serif;
   font-size: 1.6rem;
   line-height: 2;
-  box-sizing: border-box;
 }
-*{
-   box-sizing: border-box;
+img{
+   max-width: 100%;
 }
 
 h1{ font-size: 3.8rem;}
@@ -19,48 +21,58 @@ h3{ font-size: 3.0rem;}
 h4{ font-size: 2.8rem;}
 
 .contenedor{
-     max-width: 1200px;
-     margin: 0 auto;
+   width: 95%;
+   max-width: 120rem;
+   margin: 0 auto;
 }
-
-.seccion{
-   margin-bottom: 3rem;
-}
-
-img{
-   max-width: 100%;
-}
-
 
 /* Utilidades */
+.seccion{
+   margin-top: 2rem;
+   margin-bottom: 3rem;
+}
+.fw-300{
+   font-weight: 300;
+}
 
 .titulo-centrado {
-   text-align: center;
    font-weight: 300;
+   text-align: center;
 }
 
 .centrar {
    text-align: center;
 }
+.d-block{
+   display: block!important;
+}
 
+.contenido-centrado{
+   max-width: 800px;
+}
 
 /* botones */
 
-.d-block{
-     display: block!important;
-}
-
 .boton{
      text-decoration: none;
-     font-weight: 700;
      color: #ffffff;
-     padding: 1rem 3rem;
+     font-weight: 700;
      font-size: 1.8rem;
+     padding: 1rem 3rem;
+     margin-top: 3rem;
      display: inline-block;
-     margin-top: 1.5rem;
-     border: 0;
+     border: none;
+     display: block;
+     text-align: center;
+     flex: 0 0 100%;
 }
 
+@media (min-width: 768px) {
+   .boton {
+      display: inline-block;
+      flex: 0 0 auto;
+   }
+}
 .boton:hover{
      cursor: pointer;
 }
@@ -83,25 +95,35 @@ background-color: #71B100;
 }
 
 .barra{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
      padding-top: 3rem;
+}
+@media (min-width: 768px) {
+   .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
 }
 
 .navegacion a{
      color: #ffffff;
      text-decoration: none;
-     font-size: 18px;
-     margin-right: 3rem;;
+     font-size: 2.2rem;
+     display: block;
 }
 
+@media (min-width: 768px) {
+   .navegacion a{
+      display: inline-block;
+      font-size: 1.8rem;
+      margin-right: 3rem;
+   }
+   .navegacion a:last-of-type{
+        margin: 0;
+   }
+}
 .navegacion a:hover{
      color: #71B100;
-}
-
-.navegacion a:last-of-type{
-     margin: 0;
 }
 
 .contenido-header{
@@ -109,28 +131,40 @@ background-color: #71B100;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
+     text-align: center;
 }
-
+@media (min-width: 768px) {
+   .contenido-header{
+      text-align: left;
+   }
+}
 .contenido-header h1{
      font-size: 5rem;
      color: #ffffff;
-     font-weight: 300;
-     width: 60rem;
      padding-bottom: 5rem;
+     max-width: 60rem;
+     font-weight: 300;
 }
 
 
 /* :::::::::::::MAS SOBRE NOSOTROS::::::::: */
-
-.contenedor-iconos{
-     display: flex;
-     justify-content: space-between;
+@media (min-width: 768px) {
+   .contenedor-iconos{
+        display: flex;
+        justify-content: space-between;
+   }
 }
+
 .icono{
      text-align: center;
      font-size: 1.8rem;
-     width: calc(33.3% - 1rem);
 }
+@media (min-width: 768px) {
+   .icono{
+      width: calc(33.3% - 1rem);
+   }
+}
+
 
 .icono p{
      line-height: 1.4;
@@ -138,33 +172,34 @@ background-color: #71B100;
 
 
 /* :::::::::::::ANUNCIOS::::::::: */
-
-.contenedor-anuncios{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@media (min-width: 768px) {
+   .contenedor-anuncios{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+   }
 }
 
 .anuncio{
-   flex: 0 0 calc(33.3% - 1rem);
-   /* flex-grow: 0; ---agrandar
-      flex-shrink: 0; ---encoger
-      flex-basis: calc(33.3% - 1rem); ---ancho */
    font-size: 1.8rem;
+   border: 1px solid #B5B5B5;
    background-color: #F5F5F5;
    margin-bottom: 2rem;
-   border: 1px solid #B5B5B5;
+}
+
+@media (min-width: 768px) {
+   .anuncio{
+      flex: 0 0 calc(33.3% - 1rem);
+   }
 }
 
 .contenido-anuncio{
   padding: 3rem;
 }
 
-.contenido-anuncio h3 {
+.contenido-anuncio h3,
+.contenido-anuncio p {
    margin: 0;
-}
-.contenido-anuncio p{
-   /* margin: 0; */
 }
 
 .precio{
@@ -175,11 +210,10 @@ background-color: #71B100;
 }
 
 .iconos{
-   padding: 0;
    list-style: none;
+   padding: 0;
    display: flex;
    justify-content: space-between;
-   margin: 0 8%;
    flex: 1;
    max-width: 300px;
 }
@@ -208,19 +242,18 @@ background-color: #71B100;
    background-image: url(../img/encuentra.jpg);
    background-position: center center;
    background-size: cover;
-   height: 400px;
-
+   height: 40rem;
    display: flex;
    align-items: center;
 }
 
 .contenido-contactenos{
-   flex: 1;
+   flex: 0 0 95%;
    color: #ffffff;
 }
 
 .contenido-contactenos p {
-   font-size: 1.5rem;
+   font-size: 1.8rem;
 }
 
 /* -------------Blog----------- */
