@@ -59,7 +59,7 @@ h4{ font-size: 2.8rem;}
      font-weight: 700;
      font-size: 1.8rem;
      padding: 1rem 3rem;
-     margin-top: 3rem;
+     /* margin-top: 3rem; */
      display: inline-block;
      border: none;
      display: block;
@@ -74,7 +74,7 @@ h4{ font-size: 2.8rem;}
    }
 }
 .boton:hover{
-     cursor: pointer;
+   cursor: pointer;
 }
 
 .boton-naranja{
@@ -145,6 +145,26 @@ background-color: #71B100;
      max-width: 60rem;
      font-weight: 300;
 }
+/* Mobile Menu */
+.mobile-menu img{
+   width: 5rem;
+}
+@media (min-width: 768px) {
+   .mobile-menu{
+      display: none;
+   }
+}
+.navegacion:target{
+   display: block;
+}
+.navegacion{
+   display: none;
+}
+@media (min-width: 768px) {
+   .navegacion{
+      display: block;
+   }
+}
 
 
 /* :::::::::::::MAS SOBRE NOSOTROS::::::::: */
@@ -213,9 +233,10 @@ background-color: #71B100;
    list-style: none;
    padding: 0;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    flex: 1;
-   max-width: 300px;
+   max-width: 500px;
+   margin-left: 3rem;
 }
 
 .iconos li{
@@ -228,12 +249,18 @@ background-color: #71B100;
 }
 
 .iconos li p{
-   margin-left: 15px;
+   margin-left: 10px;
 }
 
 .ver-todas{
    display: flex;
-   justify-content: flex-end;
+   /* justify-content: flex-end; */
+}
+
+@media (min-width: 768px) {
+   .ver-todas{
+      justify-content: flex-end;
+   }
 }
 
 /* -------------Contactenos----------- */
@@ -257,9 +284,11 @@ background-color: #71B100;
 }
 
 /* -------------Blog----------- */
+@media (min-width: 768px) {
 .seccion-inferior{
    display: flex;
    justify-content: space-between;
+   }
 }
 
 .blog{
@@ -271,13 +300,21 @@ background-color: #71B100;
 }
 
 .entrada-blog{
-   display: flex;
-   justify-content: space-between;
    margin-bottom: 2rem;
 }
-
-.img-blog{
-   flex-basis: 40%;
+@media (min-width: 768px) {
+   .entrada-blog{
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.entrada-blog:last-of-type{
+   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+   .img-blog{
+      flex-basis: 40%;
+   }
 }
 
 .texto-blog{
@@ -349,12 +386,22 @@ background-color: #71B100;
 
 .contenedor-footer{
    padding: 3rem 0;
-   display: flex;
-   display: flex;
-   justify-content: space-between;
+   text-align: center;
 }
-
-
+@media (min-width: 768px) {
+   .contenedor-footer{
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.site-footer nav{
+   display: none;
+}
+@media (min-width: 768px) {
+   .site-footer nav{
+      display: block;
+   }
+}
 /* INTERNAS*/
 /* Nosotros*/
 
@@ -362,11 +409,12 @@ background-color: #71B100;
    background-color: #333333;
    padding: 0 0 2rem 0;
 }
-
-.contenido-nosotros{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-column-gap: 30px;
+@media (min-width: 768px) {
+   .contenido-nosotros{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 30px;
+   }
 }
 
 .texto-nosotros blockquote{
@@ -384,7 +432,7 @@ background-color: #71B100;
 
 .anuncio-precio-iconos{
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
 }
 
@@ -409,7 +457,7 @@ select
    border-radius: 0.5rem;
    border:none;
    margin-bottom: 1rem;
-   width: 100%;
+   width: 95%;
    padding: 1rem;
 
 }
